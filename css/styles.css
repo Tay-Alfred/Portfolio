@@ -1,0 +1,22 @@
+body{
+    background-color:#58795e ;
+}
+/* nav link color changes */
+/* .nav-link{
+    color: black;
+}
+.nav-item:hover{
+    color: rgb(195, 0, 255);
+}
+.nav-item:visited{
+    color: red;
+} */
+#welcome-section{
+    border: 2px solid red;
+    padding: 70px;
+    margin-bottom: 8%;
+}
+.text-content{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
