@@ -20,3 +20,11 @@ body{
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
+/* contact portion */
+.contact-details:hover{
+    color: blanchedalmond;
+}
+.contact-details{
+    color: pink;
+}
