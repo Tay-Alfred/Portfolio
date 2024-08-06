@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio of Taylor Alfred</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/test.css">
 </head>
-<body id="backtotop">
-<nav id="navbar" class="navbar navbar-fixed-top">
-    <div class="container-fluid">
-        <a href="#backtotop" class="navbar-brand">Navbar</a>
-        <form class="d-flex" role="link">
+<body id="backtotop" class="orbitron-text">  
+  
+<nav id="navbar" class="navbar sticky-top">
+  <div class="container-fluid">
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="#welcome-section">About</a>
@@ -20,41 +23,67 @@
           <a class="nav-link" href="#projects">Work</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
+          <a class="nav-link" href="#contact" id="endoflink">Contact</a>
         </li>
       </ul>
-        </form>
-      </div>
+    </div>
 </nav>
 
-<section id="welcome-section">
-    <div class="text-content">
+<section id="welcome-section" class="color-transition">
+    <div class="text-content orbitron-text">
         <h1>Taylor Alfred</h1>
         <p> Junior Web Developer</p>
     </div>
+    <img id="top-image" src="images/view3.jpeg" class="viewport-image">
 </section>
 
 <section id="projects">
+    <h2 style="margin-bottom: 30px;">Explore my projects</h2>
     <div class="project-tile">
         <div class="project-card">
-            <img class="thumbnail" src="images/outdoors homepage.png" alt="Project Screenshot" style="width:30%;cursor:pointer">
+            <img class="thumbnail" src="images/outdoors homepage.png" alt="Project Screenshot" style="width:100%;cursor:pointer;">
             <h3>National Park and Mountain Directory</h3>
-            <p>A modern directory that allows users to search through the National Parks and Mountains in the US territories in a concise format. The site features listings of national parks and mountains, providing essential information for visitors. Users can explore different mountains to climb and learn about the various national parks, including their key attractions and visitor tips. The goal is to help outdoor enthusiasts plan their trips and discover new destinations.</p>
-            <a class="github-links" href="https://github.com/Tay-Alfred/EnjoyTheOutdoors" target="_blank">View on GitHub</a>
+            <p>A modern directory that allows users to search through the National Parks and Mountains in the US territories in a concise format. Users can explore different mountains to climb and learn about the various national parks, including their key attractions and visitor tips. The goal is to help outdoor enthusiasts plan their trips and discover new destinations.</p>
+            <a class="github-links color-changing-text" href="https://github.com/Tay-Alfred/EnjoyTheOutdoors" target="_blank">View on GitHub</a>
             <style>
-                .github-links:hover{
-                    color: blanchedalmond;
-                }
+               .thumbnail:hover{
+                box-shadow: 0px 4px 10px 0px #fff;
+               }
             </style>
           </div>
+          <div class="project-card">
+            <img class="thumbnail" src="images/microblog-homepage.png" alt="Project Screenshot" style="width:100%;cursor:pointer">
+            <h3>Level Up Lounge Gaming Blog</h3>
+            <p>The Level Up Lounge is a dynamic and interactive gaming blog designed for enthusiasts to share their passion for video games. This platform allows users to browse existing posts, create new content, and engage with a community of like-minded gamers.</p>
+            <a class="github-links color-changing-text" href="https://github.com/Tay-Alfred/microblog" target="_blank">View on GitHub</a>
+          </div>
+    
+          <div class="project-card">
+            <img class="thumbnail" src="images/artist-homepage.png" alt="Project Screenshot" style="width:100%;cursor:pointer">
+            <h3>Artist Addictations E-Commerce</h3>
+            <p>The project combines a portfolio and an online store, allowing users to explore and purchase unique digital and traditional artworks. The website features responsive design, artist biographies, and a curated product catalog, providing a comprehensive and engaging experience for art enthusiasts and collectors.</p>
+            <a class="github-links color-changing-text" href="https://github.com/Tay-Alfred/artist-e-commerce" target="_blank">View on GitHub</a>
+          </div>
+    
+          <div class="project-card">
+            <img class="thumbnail" src="images/kettle-landingpage.png" alt="Project Screenshot" style="width:100%;cursor:pointer">
+            <h3>Kernel Kettle Product Landing Page</h3>
+            <p>I created a lively and engaging product landing page that reflects the fun and colorful nature of our gourmet popcorn brand. The design is vibrant and playful, using bold colors and interactive elements to highlight our unique popcorn flavors. Each section is crafted to provide a seamless and enjoyable user experience. </p>
+            <a class="github-links color-changing-text " href="https://github.com/Tay-Alfred/ProductLanding" target="_blank">View on GitHub</a>
+          </div>
     </div>
-
+     <!-- Modal Structure -->
+     <div id="imageModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImage">
+      <div id="caption"></div>
+    </div>
     <!-- include link to project. upload projects to codepen? -->
 
 </section>
 
 <section id="contact">
-    <span id="profile-link"></span>
+    <a id="profile-link"></a>
     <div class="contact-section-header">
         <h2>Let's work together...</h2>
         <p>How do you take your coffee?</p>
@@ -63,22 +92,38 @@
         <a
           href="https://www.instagram.com/eradicatetheclouds/"
           target="_blank"
-          class="btn contact-details"
+          class="btn contact-details color-changing-text"
           ><i class="fab fa-facebook-square"></i> Instagram</a
         >
         <a
           id="profile-link"
           href="https://github.com/Tay-Alfred"
           target="_blank"
-          class="btn contact-details"
+          class="btn contact-details color-changing-text"
           ><i class="fab fa-github"></i> GitHub</a
         >
-        <a href="mailto:4.alfred.taylor@gmail.com" target="_blank" class="btn contact-details"><i class="fas fa-at"></i> Send a Email</a
+        <a
+          href="https://www.linkedin.com/in/taylor-alfred-8b92a3243/"
+          target="_blank"
+          class="btn contact-details color-changing-text"
+          ><i class="fab fa-facebook-square"></i> LinkedIn</a
+        > 
+        <a href="mailto:4.alfred.taylor@gmail.com" target="_blank" class="btn contact-details color-changing-text"><i class="fas fa-at"></i> Send an Email</a
         >
       </div>
 </section>
 
-
+<!-- Footer Section -->
+<footer class="footer bg-dark text-white text-center py-3">
+  <div class="container">
+      <p>© 2024 Taylor Alfred. All rights reserved.</p>
+      <p>
+          <a href="mailto:4.alfred.taylor@gmail.com" target="_blank" class="text-white">Email</a> | 
+          <a href="https://github.com/Tay-Alfred" target="_blank" class="text-white">GitHub</a> | 
+          <a href="https://www.linkedin.com/in/taylor-alfred-8b92a3243/" target="_blank" class="text-white">LinkedIn</a>
+      </p>
+  </div>
+</footer>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

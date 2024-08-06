@@ -1,30 +1,316 @@
 body{
-    background-color:#58795e ;
-}
-/* nav link color changes */
-/* .nav-link{
-    color: black;
-}
-.nav-item:hover{
-    color: rgb(195, 0, 255);
-}
-.nav-item:visited{
-    color: red;
-} */
-#welcome-section{
-    border: 2px solid red;
-    padding: 70px;
-    margin-bottom: 8%;
-}
-.text-content{
+    background-color:#9b9692;
     text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #eab203;
+}
+@keyframes colorChange {
+    0% {
+        color: #fdfd96; /* Red */
+    }
+    25% {
+        color: #ff9801; /* Green */
+    }
+    50% {
+        color: #037d50; /* Blue */
+    }
+    75% {
+        color: #024b30; /* Magenta */
+    }
+    100% {
+        color: #fdfd96; /* Back to Red */
+    }
 }
 
+.color-changing-text {
+    animation: colorChange 10s ease-in-out infinite;
+}
+
+/* Define the keyframes for the smooth ombre color transition */
+@keyframes backgroundColorChange {
+    0% {
+        background-color: #000000; /* Black */
+    }
+    20% {
+        background-color: #6f6448; /* Dark Gray */
+    }
+    40% {
+        background-color: #9a913a; /* Medium Gray */
+    }
+    60% {
+        background-color: #ccbd2c; /* Light Gray */
+    }
+    80% {
+        background-color: #e7d51e; /* Yellow */
+    }
+    100% {
+        background-color: #000000; /* Back to Black */
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%); /* Start below the container */
+    }
+    100% {
+        transform: translateY(0); /* End at the original position */
+    }
+}
+/* Apply the animation to the desired element */
+.color-transition {
+    animation: backgroundColorChange 30s infinite;
+    background-size: 400% 400%;
+    animation-timing-function: ease-in-out;
+}
+
+.orbitron-text {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+  }
+
+/* navbar css */
+#navbar{
+    background-color: #21252b;
+}
+.nav-link{
+    color: white;
+    font-size: 22px;
+}
+.nav-link:hover{
+    animation: colorChange 10s ease-in-out infinite;
+}
+.navbar-nav{
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+    margin-left: 425px;
+}
+.navbar{
+    height: 40%;
+}
+/* end of navbar css */
+/* about section css */
+#welcome-section{
+    padding: 70px;
+    margin-bottom: 8%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.text-content{
+    color: #fff !important;
+    text-align: center;
+    font-size: 38px;
+    z-index: 2;
+}
+.viewport-image{
+    position:absolute;
+    height: 100vh;
+    width: 100%;
+    opacity: 0.4;
+}
+/* end of about section css */
+/* profile-tile */
+.project-tile{
+    display: flex;
+
+}
+.project-card{
+    max-height: 500px;
+}
+.project-card {
+    border: 1px solid #eab203;
+    padding: 20px;
+    margin: 10px;
+    padding-top: 30px;
+    border-radius: 10px;
+    background-color: #21252b;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    align-items: center;
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .project-card h3 {
+    margin: 10px 0 5px 0;
+    font-size: 1.2em;
+  }
+  
+  .project-card p {
+    margin: 5px 0;
+    font-size: small;
+  }
+  
+  .project-card a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .thumbnail{
+    transition: transform 0.5s ease-in-out; /* Smooth transition on hover */
+  }
+.thumbnail:hover {
+    transform: translateY(-20px); /* Adjust the value to control the slide distance */
+}
+  /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 60px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (Image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  /* Caption of Modal Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+  }
+  
+  /* Add Animation */
+  .modal-content, #caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0.1)} 
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+/* end of profile tile */
 /* contact portion */
+#contact{
+    margin-top: 7%;
+    margin-bottom: 7%;
+}
+.contact-section-header{
+    margin-bottom: 3%;
+}
 .contact-details:hover{
     color: blanchedalmond;
 }
-.contact-details{
-    color: pink;
+.contact-details:hover{
+  background-color: #00000099;
+}
+/* Mobile Devices */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-left: 0;
+    }
+
+    .project-card {
+        width: 90%;
+    }
+
+    #welcome-section {
+        padding: 30px;
+        margin-bottom: 5%;
+    }
+
+    .text-content {
+        font-size: 24px;
+    }
+
+    .image-container img {
+        transform: translateY(0); /* Ensure image stays in place on mobile */
+    }
+}
+
+/* Tablets (between mobile and laptop sizes) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .navbar-nav {
+        flex-direction: row;
+        gap: 50px;
+        margin-left: 100px;
+    }
+
+    .project-card {
+        width: 60%;
+    }
+
+    #welcome-section {
+        padding: 50px;
+        margin-bottom: 6%;
+    }
+
+    .text-content {
+        font-size: 30px;
+    }
+}
+
+/* 12-inch Laptops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .navbar-nav {
+        flex-direction: row;
+        gap: 100px;
+        margin-left: 300px;
+    }
+
+    .project-card {
+        width: 45%;
+    }
+
+    #welcome-section {
+        padding: 60px;
+        margin-bottom: 7%;
+    }
+
+    .text-content {
+        font-size: 32px;
+    }
 }

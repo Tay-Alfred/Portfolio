@@ -1,11 +1,12 @@
 .project-card {
-    border: 1px solid #ddd;
-    padding: 10px;
+    border: 1px solid #eab203;
+    padding: 20px;
     margin: 10px;
-    border-radius: 8px;
-    background-color: #f9f9f9;
+    padding-top: 30px;
+    border-radius: 10px;
+    background-color: #21252b;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 70%;
+    width: 40%;
     align-items: center;
   }
   
@@ -22,6 +23,7 @@
   
   .project-card p {
     margin: 5px 0;
+    font-size: small;
   }
   
   .project-card a {
